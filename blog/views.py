@@ -69,7 +69,7 @@ def post_detail(request, year, month, day, post):
                         tags__in=post_tags_ids).exclude(id=post.id)
     similar_posts = similar_posts.annotate(
                         same_tags=Count('tags')).order_by(
-                                                    '-same_tags','-publish')[:4]
+                                            '-same_tags','-publish')[:4]
 
     return render(request, 'blog/post/detail.html',
                             {'post': post,
