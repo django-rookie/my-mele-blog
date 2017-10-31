@@ -25,7 +25,7 @@ SECRET_KEY = 't$6p8^=z+%8_zm+qb%s8&!!sh@j%)lg4byd@nc8(s5#ozoz&-l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '<your_username>.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'djangorookie.pythonanywhere.com']
 
 
 # Application definition
@@ -89,7 +89,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Montreal'
 
 USE_I18N = True
 
@@ -102,10 +102,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_HOST_USER = 'my_account@gmail.com'
-#EMAIL_HOST_PASSWORD = ''
-#EMAIL_PORT = 587
-#EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'django.rookie.email@gmail.com'
+EMAIL_HOST_PASSWORD = 'testuserpass123live'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
