@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 )
 
 
@@ -110,3 +112,5 @@ EMAIL_HOST_USER = 'django.rookie.email@gmail.com'
 EMAIL_HOST_PASSWORD = 'testuserpass123live'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+SITE_ID = 1
